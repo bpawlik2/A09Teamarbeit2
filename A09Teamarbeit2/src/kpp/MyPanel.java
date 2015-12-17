@@ -12,7 +12,7 @@ public class MyPanel extends JPanel {
 	JTextArea textArea;
 	JButton jB;
 
-	public MyPanel(MyController mc, MyModel mm) {
+	public MyPanel(MyController mc, MyModel mm) { 
 		this.myController = mc;
 		this.myModel = mm;
 
