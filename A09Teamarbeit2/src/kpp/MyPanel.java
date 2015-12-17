@@ -4,9 +4,9 @@ import java.awt.GridLayout;
 import javax.swing.*;
 import java.awt.*;
 
-
 /**
  * Das Panel der GUI
+ * 
  * @author Pawlik Bernhard
  * @version 17.12.2015
  */
@@ -39,9 +39,11 @@ public class MyPanel extends JPanel {
 	JButton b23;
 	JButton b24;
 	JButton b25;
-	
+
 	/**
-	 * Initialisierung und Konfiguration der Buttons + einfugen in ein GridLayout
+	 * Initialisierung und Konfiguration der Buttons + einfugen in ein
+	 * GridLayout
+	 * 
 	 * @param mc
 	 * @param mm
 	 */
@@ -73,11 +75,9 @@ public class MyPanel extends JPanel {
 		b23 = new JButton();
 		b24 = new JButton();
 		b25 = new JButton();
-		
 
 		this.setLayout(new GridLayout(5, 5));
-		
-		
+
 		this.add(b1);
 		this.add(b2);
 		this.add(b3);
@@ -103,7 +103,7 @@ public class MyPanel extends JPanel {
 		this.add(b23);
 		this.add(b24);
 		this.add(b25);
-		
+
 		b1.setBackground(Color.YELLOW);
 		b2.setBackground(Color.YELLOW);
 		b3.setBackground(Color.YELLOW);
