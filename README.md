@@ -10,6 +10,6 @@ Aufgabenteilung: Pawlik: GUI weiterverarbeitet (Panels, Buttons, usw...)
                  Piasecki: Controller Klasse (ChangeColor, ActionPerformed, ...)
                  Kopanski: Grundstruktur von MVC - Verkabelung ; ActionListener, ActionCommand 
                  
-                 Der Rest wurde im Team fertig gestellt und nochmal überarbeitet. 
+Der Rest wurde nochmal gemeinsam überarbeitet und fertiggestellt.
                  
 17.12.2015
