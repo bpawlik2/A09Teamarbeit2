@@ -6,6 +6,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Controller des MVC's, beinhaltet dieses mal auch die Logik (Model wäre umständlich)
+ * @author Piasecki Martin
+ * @version 17.12.2015
+ */
 public class MyController implements ActionListener {
 	//Attribute
 	private MyModel myModel;
@@ -13,7 +18,7 @@ public class MyController implements ActionListener {
 	private MyPanel myPanel;
 	
 	/**
-	 * main-startet den Konstruktor
+	 * main-startet den Konstruktor und somit das ganze Programm
 	 * @param args
 	 * @since 14.12.2015
 	 */
@@ -22,7 +27,7 @@ public class MyController implements ActionListener {
 	}
 	
 	/**
-	 * Konstruktor-erzeugt die objekte/verbindet das MVC
+	 * Konstruktor-erzeugt die objekte/verbindet das MVC/ und fügt die Listener hinzu
 	 * @since 14.12.2015
 	 */
 	public MyController(){
@@ -83,7 +88,23 @@ public class MyController implements ActionListener {
 		
 	}
 	
-	
+	/**
+	 * Schaltet das Licht ein bzw. aus, je nachdem welche farbe es hat (gelb an/schwarz aus)
+	 * @param b der button der gedrückt wird
+	 * @return damit er aufhört und nicht die farbe zurückwechselt
+	 */
+	public int changeColor(JButton b){
+		if(b.getBackground()==Color.YELLOW){
+			b.setBackground(Color.BLACK);
+			return 0;
+		}
+		
+		if(b.getBackground()==Color.BLACK){
+			b.setBackground(Color.YELLOW);
+			return 1;
+		}
+		return 0;
+	}
 	
 	
 	/**
@@ -94,159 +115,184 @@ public class MyController implements ActionListener {
 		
 		switch(arg0.getActionCommand()){
 			case"1":
-				myPanel.b2.changeColor();
-				myPanel.b6.changeColor();
+				changeColor(myPanel.b1);
+				changeColor(myPanel.b2);
+				changeColor(myPanel.b6);
 			break;
 			
 			case"2":
-				myPanel.b1.changeColor();
-				myPanel.b3.changeColor();
-				myPanel.b7.changeColor();
+				changeColor(myPanel.b2);
+				changeColor(myPanel.b1);
+				changeColor(myPanel.b3);
+				changeColor(myPanel.b7);
 				break;
 				
 			case"3":
-				myPanel.b2.changeColor();
-				myPanel.b4.changeColor();	
-				myPanel.b8.changeColor();
+				changeColor(myPanel.b3);
+				changeColor(myPanel.b2);
+				changeColor(myPanel.b4);	
+				changeColor(myPanel.b8);
 			break;
 				
 			case"4":
-				myPanel.b5.changeColor();
-				myPanel.b3.changeColor();
-				myPanel.b9.changeColor();
+				changeColor(myPanel.b4);
+				changeColor(myPanel.b5);
+				changeColor(myPanel.b3);
+				changeColor(myPanel.b9);
 				break;
 				
 			case"5":
-				myPanel.b4.changeColor();
-				myPanel.b10.changeColor();
+				changeColor(myPanel.b5);
+				changeColor(myPanel.b4);
+				changeColor(myPanel.b10);
 				break;
 				
 			case"6":
-				myPanel.b1.changeColor();
-				myPanel.b7.changeColor();
-				myPanel.b11.changeColor();
+				changeColor(myPanel.b6);
+				changeColor(myPanel.b1);
+				changeColor(myPanel.b7);
+				changeColor(myPanel.b11);
 				break;
 				
 			case"7":
-				myPanel.b2.changeColor();
-				myPanel.b8.changeColor();
-				myPanel.b6.changeColor();
-				myPanel.b12.changeColor();
+				changeColor(myPanel.b7);
+				changeColor(myPanel.b2);
+				changeColor(myPanel.b8);
+				changeColor(myPanel.b6);
+				changeColor(myPanel.b12);
 				break;
 				
 			case"8":
-				myPanel.b3.changeColor();
-				myPanel.b9.changeColor();
-				myPanel.b7.changeColor();
-				myPanel.b13.changeColor();
+				changeColor(myPanel.b8);
+				changeColor(myPanel.b3);
+				changeColor(myPanel.b9);
+				changeColor(myPanel.b7);
+				changeColor(myPanel.b13);
 				break;
 				
 			case"9":
-				myPanel.b4.changeColor();
-				myPanel.b10.changeColor();
-				myPanel.b8.changeColor();
-				myPanel.b14.changeColor();
+				changeColor(myPanel.b9);
+				changeColor(myPanel.b4);
+				changeColor(myPanel.b10);
+				changeColor(myPanel.b8);
+				changeColor(myPanel.b14);
 				break;
 				
 			case"10":
-				myPanel.b5.changeColor();
-				myPanel.b9.changeColor();
-				myPanel.b15.changeColor();
+				changeColor(myPanel.b10);
+				changeColor(myPanel.b5);
+				changeColor(myPanel.b9);
+				changeColor(myPanel.b15);
 				break;
 				
 			case"11":
-				myPanel.b6.changeColor();
-				myPanel.b12.changeColor();
-				myPanel.b16.changeColor();
+				changeColor(myPanel.b11);
+				changeColor(myPanel.b6);
+				changeColor(myPanel.b12);
+				changeColor(myPanel.b16);
 				break;
 				
 			case"12":
-				myPanel.b7.changeColor();
-				myPanel.b13.changeColor();
-				myPanel.b11.changeColor();
-				myPanel.b17.changeColor();
+				changeColor(myPanel.b12);
+				changeColor(myPanel.b7);
+				changeColor(myPanel.b13);
+				changeColor(myPanel.b11);
+				changeColor(myPanel.b17);
 				break;
 				
 			case"13":
-				myPanel.b8.changeColor();
-				myPanel.b14.changeColor();
-				myPanel.b12.changeColor();
-				myPanel.b18.changeColor();
+				changeColor(myPanel.b13);
+				changeColor(myPanel.b8);
+				changeColor(myPanel.b14);
+				changeColor(myPanel.b12);
+				changeColor(myPanel.b18);
 				break;
 				
 			case"14":
-				myPanel.b9.changeColor();
-				myPanel.b15.changeColor();
-				myPanel.b13.changeColor();
-				myPanel.b19.changeColor();
+				changeColor(myPanel.b14);
+				changeColor(myPanel.b9);
+				changeColor(myPanel.b15);
+				changeColor(myPanel.b13);
+				changeColor(myPanel.b19);
 				break;
 				
 			case"15":
-				myPanel.b10.changeColor();
-				myPanel.b14.changeColor();
-				myPanel.b20.changeColor();
+				changeColor(myPanel.b15);
+				changeColor(myPanel.b10);
+				changeColor(myPanel.b14);
+				changeColor(myPanel.b20);
 				break;
 				
 			case"16":
-				myPanel.b11.changeColor();
-				myPanel.b17.changeColor();
-				myPanel.b21.changeColor();
+				changeColor(myPanel.b16);
+				changeColor(myPanel.b11);
+				changeColor(myPanel.b17);
+				changeColor(myPanel.b21);
 				
 				break;
 				
 			case"17":
-				myPanel.b12.changeColor();
-				myPanel.b16.changeColor();
-				myPanel.b18.changeColor();
-				myPanel.b22.changeColor();
+				changeColor(myPanel.b17);
+				changeColor(myPanel.b12);
+				changeColor(myPanel.b16);
+				changeColor(myPanel.b18);
+				changeColor(myPanel.b22);
 				break;
 				
 			case"18":
-				myPanel.b13.changeColor();
-				myPanel.b17.changeColor();
-				myPanel.b19.changeColor();
-				myPanel.b23.changeColor();
+				changeColor(myPanel.b18);
+				changeColor(myPanel.b13);
+				changeColor(myPanel.b17);
+				changeColor(myPanel.b19);
+				changeColor(myPanel.b23);
 				break;
 				
 			case"19":
-				myPanel.b14.changeColor();
-				myPanel.b18.changeColor();
-				myPanel.b20.changeColor();
-				myPanel.b24.changeColor();
+				changeColor(myPanel.b19);
+				changeColor(myPanel.b14);
+				changeColor(myPanel.b18);
+				changeColor(myPanel.b20);
+				changeColor(myPanel.b24);
 				break;
 				
 			case"20":
-				myPanel.b15.changeColor();
-				myPanel.b19.changeColor();
-				myPanel.b25.changeColor();
+				changeColor(myPanel.b20);
+				changeColor(myPanel.b15);
+				changeColor(myPanel.b19);
+				changeColor(myPanel.b25);
 				break;
 				
 			case"21":
-				myPanel.b16.changeColor();
-				myPanel.b22.changeColor();
+				changeColor(myPanel.b21);
+				changeColor(myPanel.b16);
+				changeColor(myPanel.b22);
 				break;
 				
 			case"22":
-				myPanel.b17.changeColor();
-				myPanel.b23.changeColor();
-				myPanel.b21.changeColor();
+				changeColor(myPanel.b22);
+				changeColor(myPanel.b17);
+				changeColor(myPanel.b23);
+				changeColor(myPanel.b21);
 				break;
 				
 			case"23":
-				myPanel.b18.changeColor();
-				myPanel.b24.changeColor();
-				myPanel.b22.changeColor();
+				changeColor(myPanel.b23);
+				changeColor(myPanel.b18);
+				changeColor(myPanel.b24);
+				changeColor(myPanel.b22);
 				break;
 				
 			case"24":
-				myPanel.b19.changeColor();
-				myPanel.b25.changeColor();
-				myPanel.b23.changeColor();
+				changeColor(myPanel.b24);
+				changeColor(myPanel.b19);
+				changeColor(myPanel.b25);
+				changeColor(myPanel.b23);
 				break;
 				
 			case"25":
-				myPanel.b20.changeColor();
-				myPanel.b24.changeColor();
+				changeColor(myPanel.b25);
+				changeColor(myPanel.b20);
+				changeColor(myPanel.b24);
 				break;
 		}
 	}
