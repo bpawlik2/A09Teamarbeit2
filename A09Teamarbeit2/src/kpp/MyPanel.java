@@ -3,40 +3,41 @@ package kpp;
 import java.awt.GridLayout;
 
 import javax.swing.*;
-
+import java.awt.event.*;
 public class MyPanel extends JPanel {
 
 	private MyController myController;
 	private MyModel myModel;
-	private JButton b1;
-	private JButton b2;
-	private JButton b3;
-	private JButton b4;
-	private JButton b5;
-	private JButton b6;
-	private JButton b7;
-	private JButton b8;
-	private JButton b9;
-	private JButton b10;
-	private JButton b11;
-	private JButton b12;
-	private JButton b13;
-	private JButton b14;
-	private JButton b15;
-	private JButton b16;
-	private JButton b17;
-	private JButton b18;
-	private JButton b19;
-	private JButton b20;
-	private JButton b21;
-	private JButton b22;
-	private JButton b23;
-	private JButton b24;
-	private JButton b25;
+	JButton b1;
+	JButton b2;
+	JButton b3;
+	JButton b4;
+	JButton b5;
+	JButton b6;
+	JButton b7;
+	JButton b8;
+	JButton b9;
+	JButton b10;
+	JButton b11;
+	JButton b12;
+	JButton b13;
+	JButton b14;
+	JButton b15;
+	JButton b16;
+	JButton b17;
+	JButton b18;
+	JButton b19;
+	JButton b20;
+	JButton b21;
+	JButton b22;
+	JButton b23;
+	JButton b24;
+	JButton b25;
 
 	public MyPanel(MyController mc, MyModel mm) {
 		this.myController = mc;
 		this.myModel = mm;
+		init();
 		b1 = new JButton();
 		b2 = new JButton();
 		b3 = new JButton();
@@ -94,5 +95,8 @@ public class MyPanel extends JPanel {
 		this.add(b25);
 		
 	}
-
+	public void init(){
+		b1.addActionListener((ActionListener) myController);
+		b1.setActionCommand("1");
+	}
 }
