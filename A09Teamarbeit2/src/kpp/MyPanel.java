@@ -1,9 +1,15 @@
 package kpp;
 
 import java.awt.GridLayout;
-
 import javax.swing.*;
 import java.awt.*;
+
+
+/**
+ * Das Panel der GUI
+ * @author Pawlik Bernhard
+ * @version 17.12.2015
+ */
 public class MyPanel extends JPanel {
 
 	private MyController myController;
@@ -33,7 +39,12 @@ public class MyPanel extends JPanel {
 	JButton b23;
 	JButton b24;
 	JButton b25;
-
+	
+	/**
+	 * Initialisierung und Konfiguration der Buttons + einfugen in ein GridLayout
+	 * @param mc
+	 * @param mm
+	 */
 	public MyPanel(MyController mc, MyModel mm) {
 		this.myController = mc;
 		this.myModel = mm;
