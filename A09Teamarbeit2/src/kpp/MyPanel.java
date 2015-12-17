@@ -3,7 +3,7 @@ package kpp;
 import java.awt.GridLayout;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.*;
 public class MyPanel extends JPanel {
 
 	private MyController myController;
@@ -37,7 +37,6 @@ public class MyPanel extends JPanel {
 	public MyPanel(MyController mc, MyModel mm) {
 		this.myController = mc;
 		this.myModel = mm;
-		init();
 		b1 = new JButton();
 		b2 = new JButton();
 		b3 = new JButton();
@@ -94,9 +93,30 @@ public class MyPanel extends JPanel {
 		this.add(b24);
 		this.add(b25);
 		
-	}
-	public void init(){
-		b1.addActionListener((ActionListener) myController);
-		b1.setActionCommand("1");
+		b1.setBackground(Color.YELLOW);
+		b2.setBackground(Color.YELLOW);
+		b3.setBackground(Color.YELLOW);
+		b4.setBackground(Color.YELLOW);
+		b5.setBackground(Color.YELLOW);
+		b6.setBackground(Color.YELLOW);
+		b7.setBackground(Color.YELLOW);
+		b8.setBackground(Color.YELLOW);
+		b9.setBackground(Color.YELLOW);
+		b10.setBackground(Color.YELLOW);
+		b11.setBackground(Color.YELLOW);
+		b12.setBackground(Color.YELLOW);
+		b13.setBackground(Color.YELLOW);
+		b14.setBackground(Color.YELLOW);
+		b15.setBackground(Color.YELLOW);
+		b16.setBackground(Color.YELLOW);
+		b17.setBackground(Color.YELLOW);
+		b18.setBackground(Color.YELLOW);
+		b19.setBackground(Color.YELLOW);
+		b20.setBackground(Color.YELLOW);
+		b21.setBackground(Color.YELLOW);
+		b22.setBackground(Color.YELLOW);
+		b23.setBackground(Color.YELLOW);
+		b24.setBackground(Color.YELLOW);
+		b25.setBackground(Color.YELLOW);
 	}
 }
